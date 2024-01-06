@@ -4,7 +4,7 @@
   "description": "Micro service for handling FLIGHT CRUD",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx nodemon src/index.js"
   },
   "author": "Shivam Kumar Singh",
   "license": "ISC",
