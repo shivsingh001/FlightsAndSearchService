@@ -20,6 +20,7 @@ async deleteCity({cityId}){
                 id :cityId,
             }
         });
+        return true;
     }catch(error){
         console.log("Something went wrong in the repository layer");
         throw {error};
@@ -43,7 +44,7 @@ async updateCity(cityId,data){
                 id: cityId
             }
         });
-        return city;
+        return city; 
     }catch(error){
         console.log("Something went wrong in the repository layer");
         throw {error};
