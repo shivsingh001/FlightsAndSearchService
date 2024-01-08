@@ -53,3 +53,4 @@ return city;
    }
 
 }
+module.exports = CityService;
