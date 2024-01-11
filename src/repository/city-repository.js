@@ -51,6 +51,17 @@ async updateCity(cityId,data){
     }
 }
 
+async getAllCities(){
+    try{
+
+        const cities = await City.findAll();
+        return cities;
+   
+    } catch(error){
+        console.log("Something went wrong in the repository layer");
+        throw {error};
+}
 }
 
+}
 module.exports = CityRepository;
