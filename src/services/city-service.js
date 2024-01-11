@@ -61,7 +61,7 @@ async getCity(cityId){
 
 async getAllCities(filter){
     try{
-  const cities = await this.cityRepository.getAllCities({name : filter.name});
+  const cities = await this.cityRepository.getAllCities({name:filter.name});
   return cities;
     }catch (error) {
         throw{error};
