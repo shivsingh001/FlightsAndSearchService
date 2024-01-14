@@ -15,7 +15,7 @@ class FlightService {
             const airplane = await this.airplaneRepository.getAirplane(data.airplaneId);
             const flight = await this.flightRepository.createFlight({
                 ...data,totalSeats:airplane.capacity  // Here we just destructure the data object and inserted the value of airpalne.capacity
-        
+            
             });
             return flight;
 
@@ -25,8 +25,18 @@ class FlightService {
         }
     }
 
-    async getFlightData(){
+    async getAllFlightData(data){  
+        
+        try {
+            const flights = await this.flightRepository.getAllFlight(data);
+            return flights;
 
+
+        }catch (error) {
+            console.log("Something went wrong at service layer", error);
+            throw {error};
+        }
+  
     }
 }
 
